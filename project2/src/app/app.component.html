@@ -1,0 +1,16 @@
+<h1>myapp</h1>
+
+{{temp}}
+{{onSet}}
+{{age}}
+
+<!-- <app-myapp  (process)="message=$event" [declared]="name" [declared1]="head"> -->
+    <app-myapp (process1)="onSet=($event)" (process)="onSub($event)" [declared]="name" [declared1]="head">
+  
+</app-myapp>
+<app-lifecycle></app-lifecycle>
+<!-- {
+ <div app-myapp>
+
+</div><h1>ragul</h1> -->
+<!-- we use app-myapp in tag to set the attribute in ts for selector:[app-my app] -->

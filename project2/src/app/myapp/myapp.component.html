@@ -1,0 +1,56 @@
+<p>myapp works!</p>
+{{5000*4}}
+<h1  [style.backgroundColor]="backgroundColor" [style.color]="color">{{declared}}</h1>
+<h2 [style.backgroundColor]="backgroundColor" [style.color]="color">{{declared1}}</h2>
+{{"welcome"}}
+<button (click)="onSub()">child1</button>
+<button (click)="onSub1()">child2</button>
+<!-- <button (click)="triggerButtonClick()">Trigger Button Click</button> -->
+<input type="text" value="{{title}}">
+
+<input type="text" [value]="title">
+<input type="text" value="title" disabled="{{isDisable}}">
+<input type="text" #myName [value]="title" disabled="[isDisabled]">
+
+<button (click)="onEvent($event)">submit</button>
+<button (click)="tempRef(myName.value)">submit</button>
+
+{{myName.value}}
+
+<h5 *ngIf="show; else elseBlock" >hii </h5>
+<ng-template #elseBlock><h5>hello</h5></ng-template>
+<!-- <h5 *ngIf="!show">hello</h5> -->
+<ul>
+    <li *ngFor="let e of arr;index as i">{{i}}{{e}}</li>
+
+
+    <li *ngFor="let e of arr;first as f;">{{f}}{{e}}</li>
+
+    
+</ul>
+
+<input type="text" value="{{num}}">
+<button (click)="myFirst($event)">save</button>
+
+<table >
+    <tr>
+        <th>id </th>
+        <th>name</th>
+        <th>age</th>
+    </tr>
+    <tr *ngFor="let e of employees">
+        <td>{{e.id}}</td>
+        <td>{{e.name}}</td>
+        <td>{{e.age}}</td>
+    </tr>
+</table>
+
+<input type="text" [(ngModel)]="name">
+{{name}}
+
+
+
+
+
+
+
